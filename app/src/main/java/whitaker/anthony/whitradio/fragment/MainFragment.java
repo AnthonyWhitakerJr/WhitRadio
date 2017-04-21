@@ -65,15 +65,15 @@ public class MainFragment extends Fragment {
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-        createStationFragment(fragmentManager, R.id.container_top_row);
-        createStationFragment(fragmentManager, R.id.container_middle_row);
-        createStationFragment(fragmentManager, R.id.container_bottom_row);
+        createStationFragment(fragmentManager, R.id.container_top_row, StationFragment.StationType.FEATURED);
+        createStationFragment(fragmentManager, R.id.container_middle_row, StationFragment.StationType.RECENT);
+        createStationFragment(fragmentManager, R.id.container_bottom_row, StationFragment.StationType.PARTY);
 
         return view;
     }
 
-    private void createStationFragment(FragmentManager fragmentManager, int id) {
-        StationFragment stationFragment = StationFragment.newInstance(null, null);
+    private void createStationFragment(FragmentManager fragmentManager, int id, StationFragment.StationType stationType) {
+        StationFragment stationFragment = StationFragment.newInstance(stationType);
         fragmentManager.beginTransaction().add(id, stationFragment).commit();
     }
 

@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">WhitRadio</string>
 
-    <string name="title_friday">It\'s Friday Evening</string>
-    <string name="subtitle_friday">Play something for&#8230;</string>
+    <string name="title_featured">It\'s Friday Evening</string>
+    <string name="subtitle_featured">Play something for&#8230;</string>
     <string name="title_recent">Recent Activity</string>
     <string name="subtitle_recent">Recently played or added</string>
+    <string name="station_travel">Flight Plan (Tunes for Travel)</string>
+    <string name="station_bike">Two-Wheelin\' (Biking Playlist)</string>
+    <string name="station_kids">Kids Jams (Music for Children)</string>
 
 </resources>
