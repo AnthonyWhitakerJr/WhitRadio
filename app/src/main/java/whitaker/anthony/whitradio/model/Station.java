@@ -5,9 +5,8 @@ package whitaker.anthony.whitradio.model;
  */
 public class Station {
 
-    private static final String DRAWABLE = "drawable/";
-    private int titleId;
-    private int imageId;
+    private final int titleId;
+    private final int imageId;
 
     public Station(int titleId, int imageId) {
         this.titleId = titleId;
