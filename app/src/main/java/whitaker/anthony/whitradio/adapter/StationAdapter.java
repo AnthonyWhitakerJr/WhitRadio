@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import whitaker.anthony.whitradio.R;
+import whitaker.anthony.whitradio.activity.MainActivity;
 import whitaker.anthony.whitradio.holder.StationViewHolder;
 import whitaker.anthony.whitradio.model.Station;
 
@@ -29,9 +30,16 @@ public class StationAdapter extends RecyclerView.Adapter<StationViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(StationViewHolder holder, int position) {
-        Station station = stations.get(position);
+    public void onBindViewHolder(StationViewHolder holder, final int position) {
+        final Station station = stations.get(position);
         holder.updateUI(station);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.getMainActivity().loadDetailsScreen(station);
+            }
+        });
     }
 
     @Override
